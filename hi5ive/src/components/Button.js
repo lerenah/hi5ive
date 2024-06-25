@@ -7,6 +7,7 @@ export const Button = ({ user }) => {
     try {
       const response = await axios.get('/user');
       console.log(response.data);
+      console.log('Hello from test branch');
       setName(response.data.name);
     } catch (error) {
       console.error(error);
