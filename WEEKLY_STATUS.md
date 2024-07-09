@@ -18,12 +18,12 @@ The team is making changes to reducing pull request reviews required to 1 from 2
 <img width="1517" alt="Screenshot 2024-06-25 at 10 29 42 PM" src= "https://github.com/Team5CSPB/hi5ive/assets/127560491/73468e6a-d47b-4a2b-8847-535a3810ff55">
 
 This week the team is finalizing the review of relevant technologies for the project, and has started making progress in flask and mongoDB. 
-On the frontend side, The team made revisions to whiteboarded user stories, as well as started wiremframes for project milestone 4.
-On the backend side, The team intialized a basic pytest setup from flask server , and confirmed the home route and user route runs 
-The team completed groundwork on the Database side in  mongoDB, with testing connections to be done next week.
+On the frontend side, the team made revisions to whiteboarded user stories, as well as started wireframes for project milestone 4.
+On the backend side, the team intialized a basic pytest setup for the flask server, and confirmed the home route and user route runs.
+The team completed groundwork on the database side in  mongoDB, with testing connections to be done next week.
 
-We completed a short sprint meeting and review. We completed a flask server check , this was pushed to the remote origin, and a pull request was intiated. 
+We completed a short sprint meeting and review. We also completed a flask server check , this was pushed to the remote origin, and a pull request was intiated. 
 
-Next week the team will be finalizing the wireframes in order to complete project milestone 4 , start creating the homepage and signin page in React, incorporate MongoDB into Flask, and implement actual data on the database side.
+Next week the team will be finalizing the wireframes in order to complete project milestone 4, start creating the homepage and signin page in React, incorporate MongoDB into Flask, and implement actual data on the database side.
 
 Minimal changes were needed, it was stated that this week will be busy and our team stressed the importance of communication, as well as keeping things simple and streamlined.
