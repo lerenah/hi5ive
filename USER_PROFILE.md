@@ -4,7 +4,7 @@
 **User Profile**
 
 #### Page Description:
-This is the user profile page, displaying the user's interests, hobbies, and groups they are a part of. The page includes About Me sections for basic user information and goals. An activity feed.
+This is the user profile page, displaying the user's interests, hobbies, and groups they are a part of. The page includes an About Me section, a list of Groups, Interests, and Hobbies. If the user is looking at their profile, they will see the Edit Profile and Settings buttons. If another user is viewing another user's profile, those buttons will be hidden. There will also be a search bar to find matches and a status icon indicating whether or not they are online. An activity feed might be a stretch goal.
 
 ---
 ![User Mockup](/images/userProfile.drawio.png)
@@ -14,14 +14,16 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
 1. **User ID**: Identifier for the user whose profile is being viewed.
 2. **Auth Token**: To verify the authenticity of the request and permissions.
 3. **View Mode**: Determines if the page is being viewed by the user themselves or another user (edit mode vs. view mode).
+4.  **Interests**: The stored interests the user has selected.
+5.  **Hobbies**: The stored hobbies the user has selected.
+6.  **Groups**: The stored groups the user has chosen.
 
 #### Data Needed to Render the Page:
 1. **Basic User Information**:
    - Profile picture URL
    - Username
-   - Location
-   - Age
-   - Status message
+   - Status
+   - About Me
 2. **Hobbies**:
    - List of hobbies
 3. **Interests**:
@@ -29,8 +31,6 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
 4. **Groups**:
    - List of groups the user is a part of
 5. **Additional Sections**:
-   - User preferences
-   - Privacy settings
    - Activity log
 
 #### Link Destinations for the Page:
@@ -42,12 +42,11 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
 
 #### List of Tests for Verifying the Rendering of the Page:
 1. **Profile Information Test**:
-   - Verify that the user's profile picture, username, location, age, and status message are displayed correctly.
+   - Verify that the user's profile picture, username, and status are displayed correctly.
    - Check that all personal information fields are populated accurately.
 
 2. **Hobbies and Interests Test**:
    - Ensure hobbies and interests are listed correctly.
-   - Validate the accuracy of the hobby and interest descriptions.
 
 3. **Groups Test**:
    - Confirm the list of groups the user is a part of is displayed correctly.
@@ -69,7 +68,4 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
    - Confirm that all necessary data is fetched and displayed without delays or errors.
    - Test the page's behavior when data is missing or incomplete.
 
-8. **UI/UX Test**:
-   - Evaluate the overall look and feel of the page for user-friendliness.
-   - Check for any visual inconsistencies or alignment issues.
 

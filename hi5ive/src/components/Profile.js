@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 
+import '../style.css';
+
 const user = {
   name: 'Hedy Lamarr',
   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
@@ -10,7 +12,7 @@ const user = {
 export const Profile = () => {
   const [name, setName] = useState('Hedy Lamarr');
   return (
-    <>
+    <div className="profile">
       <h1>{user.name}</h1>
       <img
         className="avatar"
@@ -21,6 +23,11 @@ export const Profile = () => {
           height: user.imageSize,
         }}
       />
-    </>
+      <p>
+        Hedy Lamarr was an Austrian-American actress and inventor. She was a
+        major star in the Golden Age of Hollywood, and her most popular films
+        were Algiers, Boom Town.
+      </p>
+    </div>
   );
 };
