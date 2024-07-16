@@ -8,12 +8,11 @@ import pytest
 def client():
     return app.test_client()
 
-def test_get_user(client):
-    response = client.get('/user')
+def test_get_users(client):
+    response = client.get('/users')
     assert response.status_code == 200
-    assert response.json == {'user': 'Paula Abdul'}
+    assert len(response.json) > 0
 
-def test_get_home(client):
+def test_get_unknown_route(client):
     response = client.get('/home')
-    assert response.status_code == 200
-    assert response.data == b"Welcome home, dude!"
+    assert response.status_code == 404
