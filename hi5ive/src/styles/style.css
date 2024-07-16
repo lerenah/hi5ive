@@ -1,0 +1,30 @@
+.profile .ui.segment {
+  padding: 20px;
+}
+
+.profile .ui.image {
+  margin-bottom: 10px;
+}
+
+.profile .ui.header {
+  margin-top: 10px;
+}
+
+.profile .ui.button {
+  margin-top: 10px;
+}
+
+.profile .ui.list {
+  margin-top: 20px;
+}
+
+.profile .ui.list .header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile .ui.list .item {
+  font-size: 1.2em;
+  padding: 5px;
+}

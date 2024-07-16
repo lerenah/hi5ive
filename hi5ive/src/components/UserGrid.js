@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react';
+import { Grid, Card, Image } from 'semantic-ui-react';
 
 export const UserGrid = () => {
   const [users, setUsers] = useState([]);
@@ -19,19 +20,28 @@ export const UserGrid = () => {
   }, []);
 
   return (
-    <Grid columns={3}>
+    <Grid columns={3} stackable>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <GridRow>
+        <Grid.Row>
           {users.map((user) => (
-            <GridColumn key={user.id}>
-              <h2>{user.name}</h2>
-              <Image src={user.imageUrl} alt={'Photo of ' + user.name} />
-              <p>{user.about}</p>
-            </GridColumn>
+            <Grid.Column key={user.id}>
+              <Card as={Link} to={`/profile/${user.id}`}>
+                <Image
+                  src={user.imageUrl}
+                  alt={'Photo of ' + user.name}
+                  wrapped
+                  ui={false}
+                />
+                <Card.Content>
+                  <Card.Header>{user.name}</Card.Header>
+                  <Card.Description>{user.about}</Card.Description>
+                </Card.Content>
+              </Card>
+            </Grid.Column>
           ))}
-        </GridRow>
+        </Grid.Row>
       )}
     </Grid>
   );

@@ -1,41 +1,42 @@
 import React, { Component } from 'react';
-import { MenuMenu, MenuItem, Input, Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Input, Menu } from 'semantic-ui-react';
 
-export default class MenuExampleSecondary extends Component {
+export default class Navar extends Component {
   state = { activeItem: 'home' };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
+    const { user } = this.props;
 
     return (
       <Menu secondary>
-        <MenuItem
+        <Menu.Item
+          as={Link}
+          to="/"
           name="home"
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
         />
-        <MenuItem
-          name="Profile"
-          active={activeItem === 'Profile'}
+        <Menu.Item
+          as={Link}
+          to="/my-profile"
+          name="my-profile"
+          active={activeItem === 'my-profile'}
           onClick={this.handleItemClick}
         />
-        <MenuItem
-          name="friends"
-          active={activeItem === 'friends'}
-          onClick={this.handleItemClick}
-        />
-        <MenuMenu position="right">
-          <MenuItem>
-            <Input icon="search" placeholder="Search..." />
-          </MenuItem>
-          <MenuItem
+        <Menu.Menu position="right">
+          <Menu.Item>
+            <Input icon="search" placeholder="Find Matches..." />
+          </Menu.Item>
+          <Menu.Item
             name="logout"
             active={activeItem === 'logout'}
             onClick={this.handleItemClick}
           />
-        </MenuMenu>
+        </Menu.Menu>
       </Menu>
     );
   }
