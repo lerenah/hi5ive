@@ -1,7 +1,7 @@
 # Basic test file for routes on the flask server.
 # Does not require running server.
 
-from api.app import app
+from api import app
 import pytest
 
 @pytest.fixture
