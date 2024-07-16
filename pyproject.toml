@@ -1,0 +1,9 @@
+[project]
+name = "api"
+version = "0.0.1"
+description = "Flask server api for hi5ive project."
+dependencies = ["flask", "requests"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
