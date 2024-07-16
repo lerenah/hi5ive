@@ -10,3 +10,8 @@ def get_user():
 @app.route('/home')
 def get_home():
     return b"Welcome home!"
+
+@app.route('/sign_up')
+def get_sign_up():
+    
+    return b"Sign up here!"
