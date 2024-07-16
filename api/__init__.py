@@ -1,17 +1,3 @@
-from flask import Flask
-import os
+from .app import app
 
-app = Flask(__name__)
-
-@app.route('/user')
-def get_user():
-    return {'user': 'Paula Abdul'}
-
-@app.route('/home')
-def get_home():
-    return b"Welcome home!"
-
-@app.route('/sign_up')
-def get_sign_up():
-    
-    return b"Sign up here!"
+__all__ = (app,)
