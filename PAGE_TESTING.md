@@ -18,19 +18,22 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
 6.  **Groups**: The stored groups the user has chosen.
 
 #### Data Needed to Render the Page:
-1. **Basic User Information**:
-   - Profile picture URL
+1. **User Data**:
+   -Login Credentials
+   - Profile picture
    - Username
-   - Status
-   - About Me
-2. **Hobbies**:
-   - List of hobbies
-3. **Interests**:
-   - List of interests
-4. **Groups**:
-   - List of groups the user is a part of
-5. **Additional Sections**:
-   - Activity log
+   - Description
+   - Location
+   - Interests/Hobbies
+2. **Match Data**:
+   - Profile Picture
+   - Username
+   - Description
+   - Interests/Hobbies
+   - Location
+   - Chat ID (if implemented)
+   - Last_Online_Timestamp
+
 
 #### Link Destinations for the Page:
 `@app.route('/user/<int:user_id>')`
@@ -51,7 +54,20 @@ insert here
 Insert here
 
 #### Data Needed to Render the Page:
-insert here
+1. **User Data**:
+   - Login Credentials
+   - Profile picture
+   - Username
+   - Location
+   - Interests/Hobbies
+   - Matches IDs (to filter already matched)
+2. **Match Data**:
+   - Profile Picture
+   - Username
+   - Description
+   - Interests/Hobbies
+   - Location
+   - Last_Online_Timestamp
 
 #### Link Destinations for the Page:
 `@app.route('/matches/<int:user_id>')`
@@ -71,7 +87,11 @@ insert here
 Insert here
 
 #### Data Needed to Render the Page:
-insert here
+N/A for data from database for rendering.
+
+Will need to POST from user input:
+1. **User Data**:
+   - Login Credentials
 
 #### Link Destinations for the Page:
 `@app.route('/signup')`
@@ -91,7 +111,11 @@ insert here
 Insert here
 
 #### Data Needed to Render the Page:
-insert here
+N/A for data from database for rendering.
+
+Will need to GET from user input:
+1. **User Data**:
+   - Login Credentials
 
 #### Link Destinations for the Page:
 `@app.route('/login')`
@@ -101,7 +125,7 @@ insert here
 #### Page Title 5: **Home/Info Page**
 
 #### Page Description:
-insert here
+This page serves as a home/landing page for those interested in our website. It will showcase our website and will detail the service we are offering in sections, explaining the purpose of our app. There will be a call to action for next steps like signing up or logging in.
 
 ---
 ![User Mockup](/images/userProfile.drawio.png)
@@ -111,7 +135,7 @@ insert here
 Insert here
 
 #### Data Needed to Render the Page:
-insert here
+Static Page. N/A for data from database needed for rendering.
 
 #### Link Destinations for the Page:
 `@app.route('/')`
@@ -155,4 +179,24 @@ insert here
   7. **Data Loading Test**:
      - Confirm that all necessary data is fetched and displayed without delays or errors.
      - Test the page's behavior when data is missing or incomplete.
+     - Test for improper inputs.
 
+
+- **Matching/Searching**
+   - **Data Loading Test**:
+     - Confirm that all necessary data is fetched and displayed without delays or errors.
+     - Test the page's behavior when data is missing or incomplete.
+
+- **Sign Up**
+   - **Data Loading Test**:
+     - Ensure successful storing of created authorization credentials.
+     - Test for improper input.
+
+- **Login**
+   - **Data Loading Test**:
+     - Ensure successful getting of correct authorization credentials.
+     - Test for improper input.
+     - Ensure proper data formatting for credential comparison. 
+
+- **Home/Info Page**
+  
