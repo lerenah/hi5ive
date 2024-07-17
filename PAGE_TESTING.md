@@ -54,7 +54,7 @@ Insert here
 insert here
 
 #### Link Destinations for the Page:
-`@app.route('/matching')`
+`@app.route('/matches/<int:user_id>')`
 
 <hr>
 
