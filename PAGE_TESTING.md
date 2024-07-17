@@ -104,7 +104,7 @@ Will need to POST from user input:
 insert here
 
 ---
-![User Mockup](/images/userProfile.drawio.png)
+![Login Mockup](/images/hi5iveogin.drawio.png)
 ---
 
 #### Parameters Needed for the Page:
