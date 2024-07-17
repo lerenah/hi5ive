@@ -101,14 +101,19 @@ Will need to POST from user input:
 #### Page Title 4: **Login Page**
 
 #### Page Description:
-insert here
+This is the user login page, which allows the user to enter their username or email, and password in order to gain access to the home page, as well as other pages within the app like the matching , user profile, chat. They will be able to reset their password using their email address if they forgot their password as well as sign up, if they do not yet have an account.
+
 
 ---
 ![Login Mockup](/images/hi5iveogin.drawio.png)
 ---
 
 #### Parameters Needed for the Page:
-Insert here
+1. **Username / Email** : The ID for the user, to be found in the DB.
+2. **Password**: the users key to authenticate their ID.
+3. **Submit button**: to trigger the login process.
+4. **Form validation**: potentially using a regex or some other client side program to check for proper input format.
+6. **Server-side Authentication**: Server interacts with the DB and authenticates the user.
 
 #### Data Needed to Render the Page:
 N/A for data from database for rendering.
