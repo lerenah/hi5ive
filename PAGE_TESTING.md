@@ -77,14 +77,24 @@ Insert here
 #### Page Title 3: **Sign Up**
 
 #### Page Description:
-insert here
+This is the user signup page, which allows the user sign up for our social media platform using their email address, chosen username, first and last name, and chosen password. The username must not already be in use by another user, and the password must be sufficiently secure as well. Users will also be able to click a button to login if they are already users. 
 
 ---
 ![Signup Mockup](/images/signup.drawio.png)
 ---
 
 #### Parameters Needed for the Page:
-Insert here
+1. **Username**: The ID that the user will use to login. (Must not be in use, 3-15 chars long, can include letters, numbers , and some special characters)
+2. **Email**: Will be used to verify the user and complete their sign up. (Valid email)
+3. **Password**: the users key to authenticate their ID. (8-12 characters, one uppercase letter, one special character, one lowercase, no spaces)
+4. **First name**: the users first name
+5. **Last name**: the users last name
+6. **Database storage**: securely stores user data in the database. (server-side) 
+7. **Signup button**: to trigger the signup process.
+8. **Login link**: to redirect the user to /login.
+9. **Form validation**: potentially using a regex or some other client side program to check for proper input format.
+10. **Session management**: keeps the user logged in and manages their session.
+
 
 #### Data Needed to Render the Page:
 N/A for data from database for rendering.
@@ -113,6 +123,7 @@ This is the user login page, which allows the user to enter their username or em
 2. **Password**: the users key to authenticate their ID.
 3. **Submit button**: to trigger the login process.
 4. **Form validation**: potentially using a regex or some other client side program to check for proper input format.
+5. **Sign up link**: redirect users to /signup.
 6. **Server-side Authentication**: Server interacts with the DB and authenticates the user.
 
 #### Data Needed to Render the Page:
