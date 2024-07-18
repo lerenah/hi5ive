@@ -226,7 +226,7 @@ Static Page. N/A for data from database needed for rendering.
      - Ensure proper data formatting for credential comparison. 
 
 - **Home/Info Page**
- **Visuals Loading**:
+   - **Visuals Loading**:
      - Confirm that the visuals and text appropriately display.
      - Ensure that both the SIGNUP and LOGIN buttons direct the user to the correct routes.
 
