@@ -80,7 +80,7 @@ Insert here
 insert here
 
 ---
-![User Mockup](/images/userProfile.drawio.png)
+![Signup Mockup](/images/signup.drawio.png)
 ---
 
 #### Parameters Needed for the Page:
