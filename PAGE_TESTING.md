@@ -51,7 +51,11 @@ insert here
 ---
 
 #### Parameters Needed for the Page:
-Insert here
+1. **auth**: to verify the authenticity of the request and permissions.
+2. **user_id**: the id of the user being matched
+3. **interest_for_match**: if the user would select a specific interest to use for a match query
+4. **user data[interests]**: if the user elects to use their profile's interests as the match query criteria
+5. **matched_users list**: returned list of matched users
 
 #### Data Needed to Render the Page:
 1. **User Data**:
@@ -148,7 +152,8 @@ This page serves as a home/landing page for those interested in our website. It 
 ---
 
 #### Parameters Needed for the Page:
-Insert here
+1. **auth**: to verify the authenticity of the request and permissions if logged in. needed to show profile link or sign up link
+2. **user_id**: id of the user profile link to retrieve
 
 #### Data Needed to Render the Page:
 Static Page. N/A for data from database needed for rendering.
