@@ -148,7 +148,7 @@ Will need to GET from user input:
 This page serves as a home/landing page for those interested in our website. It will showcase our website and will detail the service we are offering in sections, explaining the purpose of our app. There will be a call to action for next steps like signing up or logging in.
 
 ---
-![User Mockup](/images/userProfile.drawio.png)
+![User Mockup](/images/hi5home.drawio.png)
 ---
 
 #### Parameters Needed for the Page:
