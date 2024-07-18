@@ -46,7 +46,7 @@ This is the user profile page, displaying the user's interests, hobbies, and gro
 #### Page Title 2: **Matching/Searching**
 
 #### Page Description:
-insert here
+This is the user match page, this displays other users that the user can potentially choose to "hi5ive" ; i.e choose to match with. Each Potential match will display the users first name, profile picture, general location, and common hobbies will be shown. The user will have the option to choose to match with the other user, or choose to NOT match with them. If the User chooses NOT to match with them, there will be an option to block their profile. If the User chooses TO match with them , there will be a high five animation, the user will be added to and displayed in the friends page. 
 
 ---
 ![User Mockup](/images/userProfile.drawio.png)
