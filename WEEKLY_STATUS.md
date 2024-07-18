@@ -1,31 +1,14 @@
 # Weekly Status for hi5ive
-### Tuesday July 25nd - Sprint
 
-![Screenshot 2024-07-03 at 10 56 28 AM](https://github.com/Team5CSPB/hi5ive/assets/143558169/f72d49a1-2739-4bb8-a2cb-02f5f6e35ce7)
+### Tuesday July 16th - Sprint
 
-This week the team continued to focus on learning specific components for their given roles, specifically flask,react and mongodb. 
-The Trello board was also updated with more specific and tangible goalas to help break down what  needs to be done. 
-Tasks that individuals had begun to work on were moved from "To Do" to the "In Progress" tabs. 
-The team also practiced pushing and pulling to the hi5ive github to ensure everyone knew the process. 
+![Screenshot from 2024-07-16 17-58-00](https://github.com/user-attachments/assets/e2620d0e-82d0-4320-9297-3ba4933cd4a2)
 
-No barriers were discussed and the plan moving forward is to get a rough draft of the homepage so aesthetic decisions can be made and a direction can be decided on. 
+This week the team began work on the design of the webpage. We further clarified the objective of and divided responsibilities for the 7/18 page_testing.md project milestone. The team decided to alter our stack, changing our database from MongoDB to sql to align with the course labs and Project Milestone 5.
 
+In the next week the team will finish basic page design and planned testing requirements for each page per milestone 4. Some members of the team will be beginning pair programming, the back end will move to a sql database and continue to implement more of the site pathing. Per milestone 5 the team will begin planning how to implement some test functionality for the database.
 
-
-
-### Tuesday June 25th - Sprint
-<img width="1517" alt="Screenshot 2024-06-25 at 10 29 42 PM" src="https://github.com/Team5CSPB/hi5ive/assets/41490508/6c0a1f22-830a-4d98-9912-fb34cd2769c1">
-
-This week the team was still learning the relevant technologies for the project, making headway in flask, react, and mongodb. 
-The review for the proposed data model for the database was completed.
-We compared two visions for the application, by looking at proposed wire frames. We then decided on an overall direction for the app and general user experience flow. 
-The team also completed a demonstrate and learning session for our github workflow. 
-
-Next week the team will be working on starting the homepage, login page and signup pages and routes, as well as implementing the database model and populating it with dummy data.
-
-The team is making changes to reducing pull request reviews required to 1 from 2. As well as starting to pair programm as needed.
-
-
+----------------------------
 
 ### Tuesday July 9th - Sprint
 <img width="1517" alt="Screenshot 2024-06-25 at 10 29 42 PM" src= "https://github.com/Team5CSPB/hi5ive/assets/127560491/73468e6a-d47b-4a2b-8847-535a3810ff55">
@@ -40,3 +23,31 @@ We completed a short sprint meeting and review. We also completed a flask server
 Next week the team will be finalizing the wireframes in order to complete project milestone 4, start creating the homepage and signin page in React, incorporate MongoDB into Flask, and implement actual data on the database side.
 
 Minimal changes were needed, it was stated that this week will be busy and our team stressed the importance of communication, as well as keeping things simple and streamlined.
+
+-----------------------------
+
+### Tuesday July 2nd - Sprint
+
+![Screenshot 2024-07-03 at 10 56 28 AM](https://github.com/Team5CSPB/hi5ive/assets/143558169/f72d49a1-2739-4bb8-a2cb-02f5f6e35ce7)
+
+This week the team continued to focus on learning specific components for their given roles, specifically flask,react and mongodb. 
+The Trello board was also updated with more specific and tangible goalas to help break down what  needs to be done. 
+Tasks that individuals had begun to work on were moved from "To Do" to the "In Progress" tabs. 
+The team also practiced pushing and pulling to the hi5ive github to ensure everyone knew the process. 
+
+No barriers were discussed and the plan moving forward is to get a rough draft of the homepage so aesthetic decisions can be made and a direction can be decided on. \
+
+----------------------------
+
+### Tuesday June 25th - Sprint
+<img width="1517" alt="Screenshot 2024-06-25 at 10 29 42 PM" src="https://github.com/Team5CSPB/hi5ive/assets/41490508/6c0a1f22-830a-4d98-9912-fb34cd2769c1">
+
+This week the team was still learning the relevant technologies for the project, making headway in flask, react, and mongodb. 
+The review for the proposed data model for the database was completed.
+We compared two visions for the application, by looking at proposed wire frames. We then decided on an overall direction for the app and general user experience flow. 
+The team also completed a demonstrate and learning session for our github workflow. 
+
+Next week the team will be working on starting the homepage, login page and signup pages and routes, as well as implementing the database model and populating it with dummy data.
+
+The team is making changes to reducing pull request reviews required to 1 from 2. As well as starting to pair programm as needed.
+
