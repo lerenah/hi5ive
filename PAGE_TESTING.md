@@ -6,7 +6,9 @@
 This is the user profile page, displaying the user's interests, hobbies, and groups they are a part of. The page includes an About Me section, a list of Groups, Interests, and Hobbies. If the user is looking at their profile, they will see the Edit Profile and Settings buttons. If another user is viewing another user's profile, those buttons will be hidden. There will also be a search bar to find matches and a status icon indicating whether or not they are online. An activity feed might be a stretch goal.
 
 ---
-![User Mockup](/images/userProfile.drawio.png)
+![main](https://github.com/user-attachments/assets/e11bdf23-ef56-46b9-821d-11aa44c8e8fa)
+
+
 ---
 
 #### Parameters Needed for the Page:
