@@ -209,6 +209,10 @@ Static Page. N/A for data from database needed for rendering.
    - **Data Loading Test**:
      - Confirm that all necessary data is fetched and displayed without delays or errors.
      - Test the page's behavior when data is missing or incomplete.
+    
+   - **Profile Match Test**:
+      - Confirm that when a match is made the server takes appropriate action to update the users friends page.
+      - When a user chooses to not like another user, confrim that the client side no longer shows their profile.
 
 - **Sign Up**
    - **Data Loading Test**:
@@ -222,4 +226,7 @@ Static Page. N/A for data from database needed for rendering.
      - Ensure proper data formatting for credential comparison. 
 
 - **Home/Info Page**
-  
+ **Visuals Loading**:
+     - Confirm that the visuals and text appropriately display.
+     - Ensure that both the SIGNUP and LOGIN buttons direct the user to the correct routes.
+
