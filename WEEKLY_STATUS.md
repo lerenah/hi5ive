@@ -1,5 +1,21 @@
 # Weekly Status for hi5ive
 
+### Tuesday July 23rd - Sprint
+
+<img width="1414" alt="Screenshot 2024-07-23 at 8 40 04 PM" src="https://github.com/user-attachments/assets/d60a5686-08b5-4864-b434-117b1bb7661c">
+
+
+This week the team began finished up the work on page design. We then focused on a few of those design implementations on the frontend, the get_users page and user profile page:
+
+<img width="1432" alt="Screenshot 2024-07-23 at 8 42 22 PM" src="https://github.com/user-attachments/assets/d7089db0-b17f-4b29-99fd-0ffd79da96a1">
+
+
+<img width="1428" alt="Screenshot 2024-07-23 at 8 43 08 PM" src="https://github.com/user-attachments/assets/63af5071-b563-4b18-aac2-635db082f992">
+
+
+We did a lot more pair programming this week and spoke highly of the benefits from it. Next week, we will focus on the SQL_Testing.md assignment and continue building on the framework we've implemented. We broke down the tasks by pages where each person will identify functions and tests to make sure these functions work as expected. We will also ensure that we have time in between our schedules to pair up and learn more about different aspects of the project.
+
+-------------------------------
 ### Tuesday July 16th - Sprint
 
 ![Screenshot from 2024-07-16 17-58-00](https://github.com/user-attachments/assets/e2620d0e-82d0-4320-9297-3ba4933cd4a2)
