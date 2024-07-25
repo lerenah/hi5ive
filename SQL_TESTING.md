@@ -133,6 +133,30 @@
        The account details are stored in the database.
 
 ### User Profile Page
+    Use case name:
+        Verify correct user displays upon wakeup
+    Description:
+        Test hi5ive user profile page
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+        User must have existing account with email and login credentials verified
+    Test steps:
+        1.Navigate to home page
+        2.Provide valid user name
+        3.Provide valid email
+        4.Provide valid password
+        5.Click login button
+        6.Ensure user profile launches
+    Expected result:
+       User should be able to wake up directly on their profile page.
+    Actual result (when you are testing this, how can you tell it worked):
+       User is navigated to their respective profile pages with saved settings and groups showing
+    Status (Pass/Fail, when this test was performed)
+       Pass
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+       User is has credentials stored in the database which include, name, email, and password. 
+       Additionally, they will have stored their respective interests and hobbies for which to load onto their page.
 
 ### Matching Page
     Use case name:
