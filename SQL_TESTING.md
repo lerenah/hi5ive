@@ -108,6 +108,29 @@
         The account session details are logged in database. 
 
 ### Signup Page
+    Use case name:
+        Verify signup with valid user details
+    Description:
+        Test hi5ive sign up page
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+        User does not have an existing account with the provided email
+    Test steps:
+        1.Navigate to signup page
+        2.Provide valid user name
+        3.Provide valid email
+        4.Provide valid password
+        5.Click signup button
+    Expected result:
+       User should be able to sign up and be navigated to the welcome page
+    Actual result (when you are testing this, how can you tell it worked):
+       User is navigated to the welcome page with successful signup
+    Status (Pass/Fail, when this test was performed)
+       Pass
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+       User is registered in the database with the provided details. 
+       The account details are stored in the database.
 
 ### User Profile Page
 
