@@ -111,4 +111,48 @@
 
 ### User Profile Page
 
-### Matching PAge
+### Matching Page
+
+### Previous Matches Page
+
+    Use case name
+        Verify retrieval of a user's previous matchess for a user with previous matches.
+    Description
+        Test retrieving a profile's matches from the database.
+    Pre-conditions
+        User has a profile and is logged in with valid credentials at their profile page.
+        User has previous matches.
+    Test steps
+        1. Navigate to the previous matches page
+    Expected result
+        User should see their previous matches
+    Actual result
+        User is navigated to their previous matches page where their previous matches are displayed.
+    Status
+        Pass
+    Post-conditions
+        User is on previous matches page and matches are displayed for the user.
+-----
+    Use case name
+        Verify a user can delete a previous match.
+    Description
+        Test deletion of a previous match on the previous matches page.
+    Pre-conditions
+        User is logged in
+        User has navigated to their previous matches page
+        User has a previous match to delete
+    Test steps
+        1. Delete a previous match
+        2. Reload page
+    Expected result
+        User should be able to delete their previous match.
+    Actual result
+        The intended previous match is deleted.
+        The intended previous match is not present on reload.
+    Status
+        Pass
+    Notes
+        The reload status is necessary to verify that the database is updated 
+        and not just the front end element removed when a deletion is attempted.
+    Post-conditions
+        User no longer sees the previous match on their previous matches page.
