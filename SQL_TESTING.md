@@ -111,4 +111,56 @@
 
 ### User Profile Page
 
-### Matching PAge
+### Matching Page
+    Use case name:
+        Verify matching page displays potential matches
+    Description:
+        Test the hi5ive matching page 
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+        User needs to be logged in.
+        User has completed their profile.
+        User has other users who match their hobbies and preferences.
+    Test steps:
+        1. Navigate to matching page
+        2. Check if potential matches are displayed
+        3. Verify that the profiles display all user profile information correctly.
+    Expected result:
+        The matching page should display the potential matches with the correct info.
+    Actual result (when you are testing this, how can you tell it worked):
+        User should see the users profile picture , their name and interests, along with any                 other relevant info.
+    Status (Pass/Fail, when this test was performed)
+        Pass/Fail
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+        The page retrieves the relevant user information from the database. 
+
+    Use case name:
+        Verify matching page successfully matches users. 
+    Description:
+        Test the hi5ive matching page.
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+        User needs to be logged in.
+        User has completed their profile.
+        User has other users who match their hobbies and preferences.
+        User clicks the "match" button on a compatible user
+    Test steps:
+        1. Navigate to matching page
+        2. Check if potential matches are displayed
+        3. Click match on a user that is displayed.
+    Expected result:
+        The users are successfully matched
+    Actual result (when you are testing this, how can you tell it worked):
+        The Matches table in the database should be successfully updated with the correct user    
+        information
+        A notification that the users have matched will be displayed
+    Status (Pass/Fail, when this test was performed)
+        Pass/Fail
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+        The Matches table in the database should be successfully updated with the correct user               information.
+        The User that was selected to match is added to the matches list in the profile page.
+
+
+ 
