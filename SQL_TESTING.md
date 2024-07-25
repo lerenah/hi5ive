@@ -127,7 +127,7 @@
     Expected result:
         The matching page should display the potential matches with the correct info.
     Actual result (when you are testing this, how can you tell it worked):
-        User should see the users profile picture , their name and interests, along with any                 other relevant info.
+        User should see the users profile picture , their name and interests, along with any other relevant info.
     Status (Pass/Fail, when this test was performed)
         Pass/Fail
     Notes:
@@ -159,7 +159,7 @@
     Notes:
         N/A
     Post-conditions (what must be true about the system when the test has completed successfully):
-        The Matches table in the database should be successfully updated with the correct user               information.
+        The Matches table in the database should be successfully updated with the correct user information.
         The User that was selected to match is added to the matches list in the profile page.
 
 
