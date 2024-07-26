@@ -12,6 +12,7 @@
         last_name: User's last name.
         bio: Short biography of the user.
         profile_picture: URL to the user's profile picture.
+        location: location of user.
         created_at: Timestamp when the user was created.
         updated_at: Timestamp when the user was last updated.
 
@@ -74,20 +75,117 @@
 
 ## Access Routines
 
-    Name
-    Description
-    Parameters
-    return values
-    List of tests for verifying each access method
+### Users Table Access Methods
 
+Method Name: getUserById
+
+    Description: Retrieves a user by their unique identifier.
+    Parameters:
+        user_id (INTEGER): The unique identifier of the user.
+    Return Values: A row containing the user's information.
+    Tests:
+        Retrieve a user that exists by their ID.
+        Attempt to retrieve a user that does not exist by their ID.
+
+Method Name: createUser
+
+    Description: Inserts a new user into the Users table.
+    Parameters:
+        username (TEXT): The unique username of the user.
+        email (TEXT): The unique email of the user.
+        password_hash (TEXT): The hashed password of the user.
+        first_name (TEXT): The first name of the user.
+        last_name (TEXT): The last name of the user.
+        bio (TEXT): The biography of the user.
+        location (TEXT): The location of the user. 
+        profile_picture (TEXT): The URL to the user's profile picture.
+    Return Values: The unique identifier of the newly created user.
+    Tests:
+        Create a new user with all valid parameters.
+        Attempt to create a user with a duplicate username.
+        Attempt to create a user with a duplicate email.
+        Attempt to create a user with missing required fields.
+
+### Interests Table Access Methods
+
+Method Name: getAllInterests
+
+    Description: Retrieves all interests from the Interests table.
+    Parameters: None
+    Return Values: A list of all interests.
+    Tests:
+        Retrieve all interests when there are interests in the table.
+        Retrieve all interests when the table is empty.
+
+Method Name: createInterest
+
+    Description: Inserts a new interest into the Interests table.
+    Parameters:
+        name (TEXT): The name of the interest.
+    Return Values: The unique identifier of the newly created interest.
+    Tests:
+        Create a new interest with a valid name.
+        Attempt to create an interest with a duplicate name.
+        Attempt to create an interest with a missing name.
+
+User_Interests Table Access Methods
+
+Method Name: linkUserToInterest
+
+    Description: Links a user to an interest in the User_Interests table.
+    Parameters:
+        user_id (INTEGER): The unique identifier of the user.
+        interest_id (INTEGER): The unique identifier of the interest.
+    Return Values: The unique identifier of the newly created user-interest link.
+    Tests:
+        Link a user to an interest with valid user and interest IDs.
+        Attempt to link a user to an interest that is already linked.
+        Attempt to link a user to a non-existent interest.
+
+Method Name: getUserInterests
+
+    Description: Retrieves all interests linked to a user.
+    Parameters:
+        user_id (INTEGER): The unique identifier of the user.
+    Return Values: A list of interests linked to the user.
+    Tests:
+        Retrieve interests for a user with multiple linked interests.
+        Retrieve interests for a user with no linked interests.
+        Attempt to retrieve interests for a non-existent user.
+
+### Matches Table Access Methods
+
+Method Name: createMatch
+
+    Description: Creates a match between two users.
+    Parameters:
+        user1_id (INTEGER): The unique identifier of the first user.
+        user2_id (INTEGER): The unique identifier of the second user.
+    Return Values: The unique identifier of the newly created match.
+    Tests:
+        Create a match with valid user IDs.
+        Attempt to create a match between the same user (user1_id = user2_id).
+        Attempt to create a match with one or both non-existent users.
+
+Method Name: getMatchesForUser
+
+    Description: Retrieves all matches for a given user.
+    Parameters:
+        user_id (INTEGER): The unique identifier of the user.
+    Return Values: A list of matches involving the user.
+    Tests:
+        Retrieve matches for a user with multiple matches.
+        Retrieve matches for a user with no matches.
+        Attempt to retrieve matches for a non-existent user.
 
 
 ## Page Access
+
 ### Login Page
     Use case name:
         Verify login with valid user name and password
     Description:
-        Test the Google login page
+        Test the login page
     Pre-conditions (what needs to be true about the system before the test can be applied):
         User has valid user name and password
     Test steps:
@@ -98,7 +196,7 @@
     Expected result:
         User should be able to login
     Actual result (when you are testing this, how can you tell it worked):
-        User is navigated to dashboard with successful login
+        User is navigated to hi5ive dashboard with successful login
     Status (Pass/Fail, when this test was performed)
         Pass
     Notes:
@@ -157,6 +255,54 @@
     Post-conditions (what must be true about the system when the test has completed successfully):
        User is has credentials stored in the database which include, name, email, and password. 
        Additionally, they will have stored their respective interests and hobbies for which to load onto their page.
+    
+    Use case name:
+        Add hobbies/interests
+    Description:
+        Test the insertion of interest to user association
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+       User must be looged in.
+    Test steps:
+        1.Navigate to user profile page
+        2. Click on add button in interests section
+        3. input for user appears on page
+        4. User types in input
+        5. interest gets added to interest section of user profile.
+    Expected result:
+       User should add and persist a chosen interest on their page.
+    Actual result (when you are testing this, how can you tell it worked):
+      User sees the interest added to their interest section and it persists across sessions. 
+    Status (Pass/Fail, when this test was performed)
+       Pass
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+       User is has a persisting association with the added interest(s).
+
+    Use case name:
+        Delete hobbies/interests
+    Description:
+        Test the deletion of interest from user association
+    Pre-conditions (what needs to be true about the system before the test can be applied):
+       User must be looged in.
+       User must have atleast one interest associated with their profile.
+    Test steps:
+        1. Navigate to user profile page
+        2. Click on remove button in interests section
+        3. All currents interests have an X button on them
+        4. User presses the X button on the interests they wish to delete
+        5. interest gets removed from the interest section of user profile.
+    Expected result:
+       User should delete and persist an interest on their page.
+    Actual result (when you are testing this, how can you tell it worked):
+      User no longer sees the interest in their interest section and it persists across sessions. 
+    Status (Pass/Fail, when this test was performed)
+       Pass
+    Notes:
+        N/A
+    Post-conditions (what must be true about the system when the test has completed successfully):
+       User no longer is associated with any removed interest.
+
 
 ### Matching Page
     Use case name:
