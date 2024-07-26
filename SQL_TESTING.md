@@ -255,7 +255,7 @@ Method Name: getMatchesForUser
     Post-conditions (what must be true about the system when the test has completed successfully):
        User is has credentials stored in the database which include, name, email, and password. 
        Additionally, they will have stored their respective interests and hobbies for which to load onto their page.
-    
+-----    
     Use case name:
         Add hobbies/interests
     Description:
@@ -278,7 +278,7 @@ Method Name: getMatchesForUser
         N/A
     Post-conditions (what must be true about the system when the test has completed successfully):
        User is has a persisting association with the added interest(s).
-
+-----
     Use case name:
         Delete hobbies/interests
     Description:
@@ -327,7 +327,7 @@ Method Name: getMatchesForUser
         N/A
     Post-conditions (what must be true about the system when the test has completed successfully):
         The page retrieves the relevant user information from the database. 
-
+-----
     Use case name:
         Verify matching page successfully matches users. 
     Description:
