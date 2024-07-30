@@ -1,5 +1,10 @@
 from flask import Flask, make_response, jsonify
 import requests
+import sqlite3
+from api.db import get_db
+from api.db import init_db
+from api.db import get_user
+from api.db import create_user
 
 def generate_avatar_url():
     response = requests.get('https://randomuser.me/api/')
@@ -69,15 +74,44 @@ users = [
         },
 ]
 
+formatted_users =[
+    {
+        #"id": 1,
+        "username": "paula_abdul",
+        "email": "paula@hi5ive",
+        "password_hash": "paula123",
+        "first_name": "Paula",
+        "last_name": "Abdul",
+        "bio": "I am a singer and dancer",
+        "profile_picture": generate_avatar_url(),
+        "location": "New York"
+    }
+]
+# CREATE Table Users (
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     username TEXT UNIQUE NOT NULL,
+#     email TEXT UNIQUE NOT NULL,
+#     password_hash TEXT NOT NULL,
+#     first_name TEXT NOT NULL,
+#     last_name TEXT NOT NULL,
+#     bio TEXT,
+#     profile_picture TEXT,
+#     location TEXT
+# );
 app = Flask(__name__)
 
 @app.route('/user/<int:user_id>')
 def get_user(user_id):
-    user = None
-    for user in users:
-        if user['id'] == user_id:
-            break
+    db = get_db()
+    user = db.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
+    # user = None
+    # for user in users:
+    #     if user['id'] == user_id:
+    #         break
+    db.close()
 
+    user = dict(user) if user else None
+    print(user)
     if user:
         return make_response(jsonify(user), 200)
     else:
@@ -87,3 +121,6 @@ def get_user(user_id):
 def get_users():
     return make_response(jsonify(users), 200)
 
+init_db()
+
+create_user(**formatted_users[0])

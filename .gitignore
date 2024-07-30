@@ -3,3 +3,5 @@ venv
 /tests/__pycache__
 /api/__pycache__
 __pycache__/*
+instance
+database.db
