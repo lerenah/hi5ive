@@ -1,12 +1,13 @@
 # Basic test file for routes on the flask server.
 # Does not require running server.
 
-from api import app
+from api import create_app
 import pytest
 import json
 
 @pytest.fixture
 def client():
+    app = create_app()
     return app.test_client()
 
 def test_get_users(client):
