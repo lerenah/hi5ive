@@ -1,10 +1,9 @@
-from flask import Flask, make_response, jsonify
+from flask import Flask, Blueprint, make_response, jsonify
 import requests
 import sqlite3
-from api.db import get_db
-from api.db import init_db
-from api.db import get_user
-from api.db import create_user
+from api.db import get_db, init_db, get_user, create_user
+
+bp = Blueprint('api', __name__)
 
 def generate_avatar_url():
     response = requests.get('https://randomuser.me/api/')
@@ -98,9 +97,8 @@ formatted_users =[
 #     profile_picture TEXT,
 #     location TEXT
 # );
-app = Flask(__name__)
 
-@app.route('/user/<int:user_id>')
+@bp.route('/user/<int:user_id>')
 def get_user(user_id):
     db = get_db()
     user = db.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
@@ -117,10 +115,12 @@ def get_user(user_id):
     else:
         return make_response(jsonify({'error': 'User not found'}), 404)
 
-@app.route('/users')
+@bp.route('/users')
 def get_users():
     return make_response(jsonify(users), 200)
 
+
+# Reloads the DB and puts paula abdul back in every time
 init_db()
 
 create_user(**formatted_users[0])
