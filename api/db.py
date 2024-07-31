@@ -2,8 +2,6 @@ from flask import Flask
 import sqlite3
 import os
 
-db_path = app.config['DATABASE']
-
 def init_db():
     db = get_db()
     with open('api/schema.sql') as f:
