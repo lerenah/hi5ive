@@ -99,6 +99,9 @@ formatted_users =[
 #     location TEXT
 # );
 app = Flask(__name__)
+app.config['DATABASE'] = 'database.db'
+with app.app_context():
+    from . import db
 
 @app.route('/user/<int:user_id>')
 def get_user(user_id):
