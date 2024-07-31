@@ -20,8 +20,8 @@ def test_get_unknown_route(client):
     assert response.status_code == 404
 
 # testing route through flask to db for user 1 request
-# make_response creates werkzeug Response object with 
-# is_json, status_code, json methods below
+# test_db must run first and successfully create the user
+# that this test is checking for #* fix that
 def test_get_user(client):
     response = client.get('/user/1')
     assert response.is_json

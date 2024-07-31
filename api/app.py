@@ -3,6 +3,7 @@ import requests
 import sqlite3
 from api.db import get_db, init_db, get_user, create_user
 
+# Generates a blueprint for routing and registering routes with the app factory
 bp = Blueprint('api', __name__)
 
 def generate_avatar_url():
@@ -109,7 +110,7 @@ def get_user(user_id):
     db.close()
 
     user = dict(user) if user else None
-    print(user)
+    # print(user) #* diagnostic print to terminal
     if user:
         return make_response(jsonify(user), 200)
     else:

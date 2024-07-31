@@ -9,6 +9,10 @@ def init_db():
     db.commit()
     #db.close()
 
+# current_app must be called within context of a flask application
+# ie within a route or with app_context(). get_db() will not function
+# if called independently because it looks for the database path in
+# the context of the current flask application 
 def get_db():
     # db = sqlite3.connect('database.db')
     # db.row_factory = sqlite3.Row
@@ -23,6 +27,7 @@ def get_db():
     return g.db
 
 # retrieve a user by id
+# TODO: move query lines to route definitions?
 def get_user(user_id):
     db = get_db()
     user = db.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
