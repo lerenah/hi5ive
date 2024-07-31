@@ -5,9 +5,9 @@ from api import app
 import pytest
 import json
 
-# @pytest.fixture
-# def client():
-#     return app.test_client()
+@pytest.fixture
+def client():
+    return app.test_client()
 
 def test_get_users(client):
     response = client.get('/users')
