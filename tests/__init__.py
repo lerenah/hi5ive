@@ -1,3 +1,3 @@
-from api.db import init_db
+# from api.db import init_db
 
-init_db()
+# init_db()

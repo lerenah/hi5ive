@@ -1,12 +1,18 @@
 from api.app import generate_avatar_url
 import api.db
 from flask import jsonify, Flask
+from api import create_app
+import pytest
 
-app = Flask(__name__)
+@pytest.fixture
+def app():
+    app = create_app()
+    return app
 
-def test_init_db():
-    api.db.init_db()
-    assert api.db.get_db()
+def test_init_db(app):
+    with app.app_context():
+        api.db.init_db()
+        assert api.db.get_db()
 
 formatted_users = [
     {
@@ -22,10 +28,11 @@ formatted_users = [
     }
 ]
 
-def test_create_user():
-    api.db.init_db()
-    api.db.create_user(**formatted_users[0])
+def test_create_user(app):
     with app.app_context():
+        api.db.init_db()
+        api.db.create_user(**formatted_users[0])
+    #with app.app_context():
         user = api.db.get_user(1)
         assert user
         user = dict(user)
