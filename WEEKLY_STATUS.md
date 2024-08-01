@@ -1,5 +1,15 @@
 # Weekly Status for hi5ive
 
+### Tuesday July 30th - Sprint
+
+<img width="1437" alt="Screenshot 2024-07-30 at 12 56 59 PM" src="https://github.com/user-attachments/assets/b6fe30d3-b22a-4457-8a56-6fbb67983eeb">
+This week the team added functionality to login, succesffuly getting a prototype of the login process built. 
+We completed the planning and documentation of the SQL_TESTING.md file. Planning the schema, to the associated tests.
+The signup page UI has seen progress. 
+Serverside mockdb interations have been implemented to speed along development of the backend.
+Prototype interactions and paths have begun to be implemented.
+
+
 ### Tuesday July 23rd - Sprint
 
 <img width="1414" alt="Screenshot 2024-07-23 at 8 40 04 PM" src="https://github.com/user-attachments/assets/d60a5686-08b5-4864-b434-117b1bb7661c">
