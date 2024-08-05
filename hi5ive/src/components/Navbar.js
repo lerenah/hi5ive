@@ -17,7 +17,7 @@ export default function Navar() {
         active={activeItem === 'home'}
         onClick={handleItemClick}
       />
-      {location.pathname !== '/SignUp' && (
+      {location.pathname !== '/SignUp' && ( //Does not include profile links on signup page
         <>
           <Menu.Item
             as={Link}
