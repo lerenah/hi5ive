@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './assets/images/logo.png'; // Update this path if needed
-
-function Logo({ onClick }) {
+import logo from './assets/images/logo.png';
+function Logo(){
   return (
     <img
       src={logo}
@@ -11,5 +10,4 @@ function Logo({ onClick }) {
     />
   );
 }
-
 export default Logo;
