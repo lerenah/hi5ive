@@ -1,50 +1,57 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Input, Menu } from 'semantic-ui-react';
 
-export default class Navar extends Component {
-  state = { activeItem: 'home' };
+export default function Navar() {
+  const [activeItem, setActiveItem] = React.useState('home');
+  const location = useLocation();
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  render() {
-    const { activeItem } = this.state;
-    const { user } = this.props;
-
-    return (
-      <Menu secondary>
-        <Menu.Item
-          as={Link}
-          to="/"
-          name="home"
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          as={Link}
-          to="/users"
-          name="5ivers"
-          active={activeItem === '5ivers'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          as={Link}
-          to="/my-profile"
-          name="my-profile"
-          active={activeItem === 'my-profile'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Menu position="right">
-          <Menu.Item>
-            <Input icon="search" placeholder="Find Matches..." />
-          </Menu.Item>
+  return (
+    <Menu secondary>
+      <Menu.Item
+        as={Link}
+        to="/"
+        name="home"
+        active={activeItem === 'home'}
+        onClick={handleItemClick}
+      />
+      {location.pathname !== '/SignUp' && (
+        <>
           <Menu.Item
-            name="logout"
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
+            as={Link}
+            to="/users"
+            name="5ivers"
+            active={activeItem === '5ivers'}
+            onClick={handleItemClick}
           />
-        </Menu.Menu>
-      </Menu>
-    );
-  }
+          <Menu.Item
+            as={Link}
+            to="/my-profile"
+            name="my-profile"
+            active={activeItem === 'my-profile'}
+            onClick={handleItemClick}
+          />
+          <Menu.Item
+            as={Link}
+            to="/SignUp"
+            name="SignUp"
+            active={activeItem === 'SignUp'}
+            onClick={handleItemClick}
+          />
+          <Menu.Menu position="right">
+            <Menu.Item>
+              <Input icon="search" placeholder="Find Matches..." />
+            </Menu.Item>
+            <Menu.Item
+              name="logout"
+              active={activeItem === 'logout'}
+              onClick={handleItemClick}
+            />
+          </Menu.Menu>
+        </>
+      )}
+    </Menu>
+  );
 }

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Logo from './components/Logo';
 import LoginPage from './components/LoginPage';
 import HelloPage from './components/HelloPage';
+import SignUp from './components/SignUp';
 
 const user = {
   id: 6,
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" element={<HelloPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/users" element={<UserGrid />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route
               path="/my-profile"
               element={<Profile user={loggedInUser} />}
