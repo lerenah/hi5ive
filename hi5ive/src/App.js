@@ -70,10 +70,15 @@ function App() {
 							path="/users"
 							element={<UserGrid />}
 						/>
+            <Route
+							path="/SignUp"
+							element={<SignUp />}
+            />
 						<Route
 							path="/my-profile"
 							element={<Profile user={loggedInUser} />}
 						/>
+            
 					</Routes>
 				</Router>
 			</div>
