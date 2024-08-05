@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-
 import './App.css';
 import { Profile } from './components/Profile';
 import { UserGrid } from './components/UserGrid';
 import Navbar from './components/Navbar';
-import Logo from './components/Logo';
 import LoginPage from './pages/LoginPage';
 import HelloPage from './pages/HelloPage';
 
@@ -22,27 +20,39 @@ const user = {
 };
 
 function App() {
-  // not logged in logic is running
-  // logged in logic is commented out
-  //return (
-  // <div className='Homepage'>
-  //<HomePage/>
-  // </div>
-
+  // condition logged in
+    // uncomment below to be logged in
   const [loggedInUser, setLoggedInUser] = useState(user);
+
+
+  // user is not logged in
+    // uncomment below to be logged out
+   //const [loggedInUser, setLoggedInUser] = useState(null);
+
+   //handles logout
+   const handleLogout = () => {
+    setLoggedInUser(null);
+   };
+
   return (
     <div className="App">
       <div className="container">
         <Router>
-          <Navbar user={loggedInUser} />
+        {loggedInUser && <Navbar user={loggedInUser} onLogout={handleLogout} />} {/* Conditionally render Navbar */}
           <Routes>
             <Route path="/" element={<HelloPage/>} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/users" element={<UserGrid />} />
+            <Route path="/login"
+             element={<LoginPage setLoggedInUser={setLoggedInUser} />}
+              />
+            <Route
+            path="/users"
+            element={loggedInUser ? <UserGrid />: <Navigate to="/login" />}
+            />
             <Route
               path="/my-profile"
-              element={<Profile user={loggedInUser} />}
+              element={loggedInUser ? <Profile user={loggedInUser} />: <Navigate to="/login" />}
             />
+             <Route path="*" element={<Navigate to={loggedInUser ? "/users" : "/login"} />} />
           </Routes>
         </Router>
       </div>

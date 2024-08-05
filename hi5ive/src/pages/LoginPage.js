@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../components/Logo.js';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 // LOGIN PAGE
 // two fields for username and password , and input error handling
 // a login button
@@ -11,6 +13,9 @@ function LoginPage(){
   //state: The current state value.
   //setState: Function to update the state.
   //initialValue: The initial state value.
+
+  const navigate = useNavigate();
+
   const [username,setUsername] =  useState('');
   const [password,setPassword] =  useState('');
   const [error, setError] = useState('');
@@ -29,7 +34,7 @@ function LoginPage(){
       // window.location - gets current url and redirects user to a URL
       // set windown url to /matches
       // update to use the backend to return the users specific match  page
-      window.location.href = '/matches';
+        navigate("/users")
     }
     else {
       // sets the error variable to have a value

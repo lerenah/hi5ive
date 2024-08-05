@@ -1,7 +1,6 @@
 import React, { useRef, useState} from 'react';
 import '../styles/style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from 'semantic-ui-react';
 
 
 
@@ -15,6 +14,8 @@ function ImageSlider(){
     { id: 1, url: 'https://via.placeholder.com/150' },
     { id: 2, url: 'https://via.placeholder.com/150' },
     { id: 3, url: 'https://via.placeholder.com/150' },
+    { id: 4, url: 'https://via.placeholder.com/150' },
+    { id: 5, url: 'https://via.placeholder.com/150' },
    ]);
 
  // image slider compenent
@@ -28,7 +29,7 @@ function ImageSlider(){
     container.scrollLeft -= scrollAmount; // scroll left by the specified amount
   }}
   >
-     <FontAwesomeIcon icon={faChevronLeft} />
+     <Icon name="chevron left"/>
   </button>
   {/* Image container */}
   <div className="images-container" ref={sliderRef}>
@@ -49,7 +50,7 @@ function ImageSlider(){
           container.scrollLeft += scrollAmount; // Scroll right by the specified amount
         }}
       >
-        <FontAwesomeIcon icon={faChevronRight} />
+        <Icon name="chevron right" />
       </button>
    </div>
  );

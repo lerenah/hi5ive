@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../components/Logo.js';
-import Navbar from '../components/Navbar.js';
 import ImageSlider from '../components/ImageSlider.js';
 // PLANNING:
 // an about div
@@ -12,23 +12,27 @@ import ImageSlider from '../components/ImageSlider.js';
   // one button that directs the user to /signup
 
 function HelloPage(){
+  const navigate = useNavigate();
+  //login handler
+const loginClick = () =>{
+  navigate("/login"); // navigate to the login page
+}
+//signup handler
+const signupClick = () => {
+  navigate("/signup");
+}
 
-// intilaize variables :
-//login
-const loginClick = () => {
-  window.location.href = '/login';
-}
-//signup
-const signupClick = () =>{
-window.location.href = '/signup';
-}
 
 return (
   <div>
     <div className="About">
   <h1>About HI5IVE</h1>
+  <div className="Logo">
   <Logo/>
-  <p>desc/summary about our business message</p>
+  </div>
+  <p>Have you ever felt isolated and secluded when trying to enjoy your pastime activities?
+    Well, it’s time you reached out and hi 5ive’d someone who perhaps has the same hobbies as you.
+    With Hi5ive, we aim to connect users on a deeper level based on their common interests.</p>
   </div>
 
   <div className="Scrollshow">
