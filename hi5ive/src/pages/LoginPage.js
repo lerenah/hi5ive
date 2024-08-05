@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Logo from '../components/Logo.js';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import '../styles/LoginPage.css';
+import {Button} from 'semantic-ui-react';
+
 // LOGIN PAGE
 // two fields for username and password , and input error handling
 // a login button
@@ -77,12 +80,12 @@ function LoginPage(){
       {error && <div className="Error">{error}</div>}
       <br />
       <div className="InputContainer">
-        <input
-        className="inputButton"
-        type="button"
+        <Button
+        primary
         onClick={onButtonClick}
-        value="Login"
-        />
+        >
+          Login
+        </Button>
         </div>
       </div>
   );

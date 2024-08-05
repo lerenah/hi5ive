@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../components/Logo.js';
 import ImageSlider from '../components/ImageSlider.js';
+import '../styles/HelloPage.css'
+import {Button} from 'semantic-ui-react';
 // PLANNING:
 // an about div
   // a logo in the top left corner
@@ -16,23 +18,27 @@ function HelloPage(){
   //login handler
 const loginClick = () =>{
   navigate("/login"); // navigate to the login page
+  console.log("login button clicked");
 }
 //signup handler
 const signupClick = () => {
   navigate("/signup");
+  console.log("Signup button clicked");
 }
 
 
 return (
   <div>
     <div className="About">
+      <div className="Logo">
+        <Logo/>
+        </div>
+    <div className="Info">
   <h1>About HI5IVE</h1>
-  <div className="Logo">
-  <Logo/>
-  </div>
   <p>Have you ever felt isolated and secluded when trying to enjoy your pastime activities?
     Well, it’s time you reached out and hi 5ive’d someone who perhaps has the same hobbies as you.
     With Hi5ive, we aim to connect users on a deeper level based on their common interests.</p>
+    </div>
   </div>
 
   <div className="Scrollshow">
@@ -45,12 +51,12 @@ return (
   <div className="calltoaction">
   <h1>BECOME A 5IVER</h1>
   {/* Buttons here */}
-  <button onClick={signupClick} className="authButton">
+  <Button primary onClick={signupClick} className="authButton">
     SIGNUP
-  </button>
-  <button onClick={loginClick} className="authButton">
+  </Button>
+  <Button  secondary onClick={loginClick} className="authButton">
     LOGIN
-  </button>
+  </Button>
   </div>
 </div>
   );
