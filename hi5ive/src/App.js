@@ -52,7 +52,8 @@ function App() {
               path="/my-profile"
               element={loggedInUser ? <Profile user={loggedInUser} />: <Navigate to="/login" />}
             />
-             <Route path="*" element={<Navigate to={loggedInUser ? "/users" : "/login"} />} />
+             <Route path="*" element={<Navigate to={loggedInUser ? "/users" : "/"} />} />
+
           </Routes>
         </Router>
       </div>
