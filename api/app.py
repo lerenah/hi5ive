@@ -33,6 +33,32 @@ def get_users():
     print(f"Users list: {users_list}")  # Debug print
     return make_response(jsonify(users_list), 200)
 
+@bp.route('/user/<int:user_id>', methods=['GET'])
+def get_user(user_id):
+    user = None
+    cursor = None
+    db_conn = None
+    try:
+        db_conn = db.get_db()  # Ensure this function returns a psycopg2 connection
+        cursor = db_conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+        cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
+        user = cursor.fetchone()
+        print(f"Fetched user: {user}")  # Debug print
+    except Exception as e:
+        print(f"Error fetching user: {e}")
+    finally:
+        if cursor:
+            cursor.close()
+        if db_conn:
+            db_conn.close()
+
+    if user is None:
+        return make_response(jsonify({"error": "User not found"}), 404)
+
+    user_dict = dict(user)
+    print(f"User dict: {user_dict}")  # Debug print
+    return make_response(jsonify(user_dict), 200)
+
 app.register_blueprint(bp)
 
 if __name__ == '__main__':
