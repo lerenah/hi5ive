@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Logo from './Logo.js';
-import Navbar from './Navbar.js';
-import ImageSlider from './ImageSlider.js';
+import Logo from '../components/Logo.js';
+import Navbar from '../components/Navbar.js';
+import ImageSlider from '../components/ImageSlider.js';
 // PLANNING:
 // an about div
   // a logo in the top left corner

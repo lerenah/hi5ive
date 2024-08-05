@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from './Logo.js';
+import Logo from '../components/Logo.js';
 // LOGIN PAGE
 // two fields for username and password , and input error handling
 // a login button
