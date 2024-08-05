@@ -67,6 +67,10 @@ function App() {
 							element={<LoginPage />}
 						/>
 						<Route
+							path="/users"
+							element={<UserGrid />}
+						/>
+						<Route
 							path="/my-profile"
 							element={<Profile user={loggedInUser} />}
 						/>
