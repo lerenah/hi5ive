@@ -54,7 +54,7 @@ function SignUp() {
         }
 
         if (validatePasswords()) {
-            // Submit the form
+            // Submit the form 
             console.log('Form submitted');
         }
     };
