@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import 'semantic-ui-css/semantic.min.css'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route,Navigate } from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css';
+import SignUp from './components/SignUp.js';
+import './App.css';
+import { Profile } from './components/Profile';
+import { UserGrid } from './components/UserGrid';
+import Navbar from './components/Navbar';
+import Logo from './components/Logo';
+import LoginPage from './pages/LoginPage';
+import HelloPage from './pages/HelloPage';
 
-import './App.css'
-import { Profile } from './components/Profile'
-import { UserGrid } from './components/UserGrid'
-import Navbar from './components/Navbar'
-import Logo from './components/Logo'
-import LoginPage from './components/LoginPage'
-import HelloPage from './components/HelloPage'
 
 const user = {
 	id: 6,
@@ -29,8 +30,12 @@ function App() {
 	//<HomePage/>
 	// </div>
 
-	const [loggedInUser, setLoggedInUser] = useState(user)
+	const [loggedInUser, setLoggedInUser] = useState(null);
 	const [users, setUsers] = useState([])
+
+	const handleLogout = () => {
+    setLoggedInUser(null);
+   };
 
 	useEffect(() => {
 		// Function to fetch data from the backend
@@ -56,7 +61,7 @@ function App() {
 		<div className="App">
 			<div className="container">
 				<Router>
-					<Navbar user={loggedInUser} />
+				{loggedInUser && <Navbar user={loggedInUser} onLogout={handleLogout} />} {/* Conditionally render Navbar */}
 					<Routes>
 						<Route
 							path="/"
@@ -64,11 +69,11 @@ function App() {
 						/>
 						<Route
 							path="/login"
-							element={<LoginPage />}
+							element={<LoginPage setLoggedInUser={setLoggedInUser} />}
 						/>
 						<Route
 							path="/users"
-							element={<UserGrid />}
+							element={loggedInUser ? <UserGrid />: <Navigate to="/login" />}
 						/>
             <Route
 							path="/SignUp"
@@ -76,9 +81,10 @@ function App() {
             />
 						<Route
 							path="/my-profile"
-							element={<Profile user={loggedInUser} />}
+							element={loggedInUser ? <Profile user={loggedInUser} />: <Navigate to="/login" />}
 						/>
-            
+						<Route path="*" element={<Navigate to={loggedInUser ? "/users" : "/"} />} />
+
 					</Routes>
 				</Router>
 			</div>
