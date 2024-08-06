@@ -65,18 +65,6 @@ body {
   align-items: center;
 }
 
-.images-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth; /* Smooth scrolling for better user experience */
-  width: 300px; /* Set a fixed width for the slider */
-}
-
-.image {
-  width: 100%; /* Image takes full width of its container */
-  max-width: 150px; /* Set a max-width for each image */
-  margin: 0 5px; /* Small margin between images */
-}
 
 .nav-btn {
   background: none;

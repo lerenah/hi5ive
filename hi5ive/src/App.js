@@ -10,6 +10,7 @@ import Logo from './components/Logo';
 import LoginPage from './pages/LoginPage';
 import HelloPage from './pages/HelloPage';
 
+
 const user = {
 	id: 6,
 	status: 'active',

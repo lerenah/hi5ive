@@ -30,7 +30,7 @@ const signupClick = () => {
 return (
   <div>
     <div className="About">
-      <div className="Logo">
+      <div className="Logo Container">
         <Logo/>
         </div>
     <div className="Info">

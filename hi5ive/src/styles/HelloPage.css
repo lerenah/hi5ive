@@ -17,8 +17,8 @@ body{
 }
 
 /* Logo styles */
-.Logo img {
-  width: 360px; /* Set the width of the logo image */
+.LogoContainer img {
+  width: 250px; /* Set the width of the logo image */
   height: auto; /* Maintain aspect ratio */
 }
 
