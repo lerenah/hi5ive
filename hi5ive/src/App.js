@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import LoginPage from './pages/LoginPage';
 import HelloPage from './pages/HelloPage';
 
-const user = {
+const dummyUseruser = {
   id: 6,
   status: 'active',
   name: 'Hedy Lamar',
@@ -22,12 +22,12 @@ const user = {
 function App() {
   // condition logged in
     // uncomment below to be logged in
-  const [loggedInUser, setLoggedInUser] = useState(user);
+  //onst [loggedInUser, setLoggedInUser] = useState(user);
 
 
   // user is not logged in
     // uncomment below to be logged out
-   //const [loggedInUser, setLoggedInUser] = useState(null);
+   const [loggedInUser, setLoggedInUser] = useState(null);
 
    //handles logout
    const handleLogout = () => {

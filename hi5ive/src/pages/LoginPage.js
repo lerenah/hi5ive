@@ -10,7 +10,7 @@ import {Button} from 'semantic-ui-react';
 // a login button
 // if sucessful, will return the matches page
  // Brandname and Logo
-function LoginPage(){
+function LoginPage({setLoggedInUser}){
   // hooks to use state in functional components
   // const [state,setState] = useState(initialValue)
   //state: The current state value.
@@ -22,6 +22,18 @@ function LoginPage(){
   const [username,setUsername] =  useState('');
   const [password,setPassword] =  useState('');
   const [error, setError] = useState('');
+  // Dummy user data from App.js
+  const dummyUser = {
+    id: 6,
+    status: 'active',
+    name: 'Hedy Lamar',
+    hobbies: ['singing', 'dancing'],
+    groups: ['trekking', 'cooking'],
+    interests: ['movies', 'sports'],
+    about: 'I am a singer and dancer',
+    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  };
+
   const onButtonClick = () => {
     // update this function later with more detailed login requirements
     // initial error condititons: if there is no username or password
@@ -37,6 +49,7 @@ function LoginPage(){
       // window.location - gets current url and redirects user to a URL
       // set windown url to /matches
       // update to use the backend to return the users specific match  page
+        setLoggedInUser(dummyUser);
         navigate("/users")
     }
     else {
