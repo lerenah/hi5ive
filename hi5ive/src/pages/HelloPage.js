@@ -35,9 +35,15 @@ return (
         </div>
     <div className="Info">
   <h1>About HI5IVE</h1>
-  <p>Have you ever felt isolated and secluded when trying to enjoy your pastime activities?
-    Well, it’s time you reached out and hi 5ive’d someone who perhaps has the same hobbies as you.
-    With Hi5ive, we aim to connect users on a deeper level based on their common interests.</p>
+  <p>Have you ever felt isolated and secluded when trying to enjoy your favorite activities?
+    Now you can reach out and simply Hi5ive’d someone with the same interests.
+    With Hi5ive, we aim to connect users on a deeper level based on their common interests and hobbies.
+    Before the popularity of technology,making friends was just by a matter of convenience.
+     Most of our friends either went to the same school or grew up in the same neighborhood.
+      Times have changed and the more we connect with our devices the harder it is to find actual human interaction.
+      We want to leverage these devices to encourage face to face human interaction with the Hi5ive application.
+
+</p>
     </div>
   </div>
 

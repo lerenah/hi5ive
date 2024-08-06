@@ -22,12 +22,12 @@ const user = {
 function App() {
   // condition logged in
     // uncomment below to be logged in
-  //const [loggedInUser, setLoggedInUser] = useState(user);
+  const [loggedInUser, setLoggedInUser] = useState(user);
 
 
   // user is not logged in
     // uncomment below to be logged out
-   const [loggedInUser, setLoggedInUser] = useState(null);
+   //const [loggedInUser, setLoggedInUser] = useState(null);
 
    //handles logout
    const handleLogout = () => {
